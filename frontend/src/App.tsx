@@ -1,12 +1,22 @@
 
-import './App.css'
+import { Routes, Route } from 'react-router-dom'
+
+import Home from './pages/Home'
+import Login from './pages/Login'
+import SignUp from './pages/SignUp'
 
 function App() {
 
 
   return (
     <>
-      <h1>hello World</h1>
+      <div className="p-4 h-screen flex items-cent justify-center">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </div>
     </>
   )
 }
